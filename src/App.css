@@ -7,17 +7,25 @@
   --shadow: 0 20px 60px rgba(0,0,0,0.35);
 }
 
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  height:100%;
+}
+
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   color: var(--text);
-  background: radial-gradient(1200px 700px at 20% 10%, rgba(99,102,241,0.25), transparent 50%),
-              radial-gradient(900px 600px at 70% 20%, rgba(16,185,129,0.18), transparent 55%),
-              var(--bg);
+  background:
+    radial-gradient(1200px 700px at 20% 10%, rgba(99,102,241,0.25), transparent 50%),
+    radial-gradient(900px 600px at 70% 20%, rgba(16,185,129,0.18), transparent 55%),
+    var(--bg);
 }
 
+/* Layout */
 .page{
   min-height:100vh;
 }
@@ -28,6 +36,16 @@ body{
   margin: 0 auto;
 }
 
+.main{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  display:flex;
+  flex-direction:column;
+  gap: 24px;
+}
+
+/* Header */
 .pill{
   display:inline-block;
   padding: 6px 10px;
@@ -35,7 +53,7 @@ body{
   border-radius: 999px;
   color: var(--muted);
   background: rgba(255,255,255,0.04);
-  margin: 0 0 14px;
+  margin-bottom: 14px;
 }
 
 .title{
@@ -45,7 +63,7 @@ body{
 }
 
 .subtitle{
-  margin: 10px 0 0;
+  margin-top: 10px;
   color: var(--muted);
   font-size: 16px;
 }
@@ -57,6 +75,7 @@ body{
   gap: 10px;
 }
 
+/* Buttons */
 .btn{
   display:inline-flex;
   align-items:center;
@@ -70,18 +89,17 @@ body{
   transition: transform .12s ease, background .12s ease;
 }
 
-.btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,0.07); }
-.btn.primary{ background: rgba(99,102,241,0.25); border-color: rgba(99,102,241,0.45); }
-
-.main{
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 0 20px 60px;
-  display:flex;
-  flex-direction:column;
-  gap: 14px;
+.btn:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.07);
 }
 
+.btn.primary{
+  background: rgba(99,102,241,0.25);
+  border-color: rgba(99,102,241,0.45);
+}
+
+/* Cards */
 .card{
   background: var(--card);
   border: 1px solid var(--border);
@@ -92,10 +110,11 @@ body{
 }
 
 .card h2{
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   font-size: 18px;
 }
 
+/* Grid */
 .grid{
   display:grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -103,19 +122,84 @@ body{
 }
 
 @media (min-width: 780px){
-  .grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
+/* Projects */
 .project{
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 14px;
   background: rgba(255,255,255,0.03);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  height: 520px;
+  overflow: hidden;
 }
 
-.project h3{ margin: 0 0 8px; font-size: 16px; }
-.project p{ margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+.project h3{
+  margin: 0;
+  font-size: 16px;
+}
 
+.project p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.muted{
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Tech badges */
+.tech{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin: 6px 0;
+}
+
+.badge{
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+}
+
+/* Highlights */
+.highlights{
+  margin: 0;
+  padding-left: 18px;
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 8px;
+}
+
+.highlights li{
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.highlights::-webkit-scrollbar{
+  width: 6px;
+}
+
+.highlights::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,0.22);
+  border-radius: 6px;
+}
+
+/* Links */
 .links{
   display:flex;
   gap: 12px;
@@ -131,16 +215,45 @@ body{
   border-bottom-color: rgba(255,255,255,0.75);
 }
 
+/* Skills */
+.skills-group{
+  margin-bottom: 14px;
+}
+
+.skills-group h3{
+  margin: 6px 0 8px;
+  font-size: 15px;
+}
+
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill{
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  color: var(--muted);
+}
+
+/* Contact */
 .contact{
   margin: 0;
   padding-left: 18px;
   color: var(--muted);
 }
 
-.contact a{ color: var(--text); }
+.contact a{
+  color: var(--text);
+}
 
+/* Footer */
 .footer{
   text-align:center;
   color: var(--muted);
-  padding: 8px 0 0;
+  padding-top: 8px;
 }
