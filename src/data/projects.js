@@ -68,7 +68,7 @@ export const projects = [
       "Layered architecture (Controller/Service/Repository/DTOs)",
       "Designed for scalable backend data processing"
     ],
-    github: "https://github.com/johnnytelles77/scanex-api",
+    github: "https://github.com/johnnytelles77/scanex-api.git",
     live: null
   }
 ];
