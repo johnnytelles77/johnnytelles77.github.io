@@ -49,26 +49,26 @@ export const projects = [
     github: "https://github.com/johnnytelles77/integrador-53155.git",
     live: null
   },
-  {
-  title: "Paramo Cosmetics Store",
-  subtitle: "E-commerce cosmetics storefront (React)",
-  description:
-    "Cosmetics store UI with product catalog, product details, cart flow, and responsive layout.",
-  tech: [
-    "React",
-    "JavaScript",
-    "Vite",
-    "CSS",
-    "REST API"
-  ],
-  highlights: [
-    "Product catalog + search/filter",
-    "Product details page",
-    "Cart + quantity updates",
-    "Responsive UI for mobile",
-    "Clean component structure"
-  ],
-  github: "https://github.com/johnnytelles77/Paramo-Cosmetics.git", 
-  live: null
-}
+    {
+    title: "SCANEX",
+    subtitle: "Blockchain Transaction Analysis Backend",
+    description:
+      "Backend service that ingests blockchain transactions, normalizes data, and generates rule-based risk scores for addresses.",
+    tech: [
+      "Java",
+      "Spring Boot",
+      "REST APIs",
+      "PostgreSQL",
+      "External APIs",
+      "Docker"
+    ],
+    highlights: [
+      "Transaction ingestion + normalization from external APIs",
+      "Rule-based risk scoring engine (LOW/MED/HIGH)",
+      "Layered architecture (Controller/Service/Repository/DTOs)",
+      "Designed for scalable backend data processing"
+    ],
+    github: "https://github.com/johnnytelles77/scanex-api",
+    live: null
+  }
 ];
