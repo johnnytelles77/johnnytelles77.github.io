@@ -3,7 +3,7 @@ export const projects = [
     title: "LoyaltyOS",
     subtitle: "Customer Loyalty Platform",
     description:
-      "Full stack loyalty platform designed for businesses to manage customers, reward points, promotions, and redemptions through secure backend APIs.",
+      "Backend-driven loyalty platform for managing customers, rewards, redemptions, and promotions through secure REST APIs.",
     tech: [
       "Java 21",
       "Spring Boot",
@@ -13,15 +13,15 @@ export const projects = [
       "JPA/Hibernate",
       "JUnit",
       "Mockito",
-      "Next.js",
-      "Swagger/OpenAPI"
+      "Swagger/OpenAPI",
+      "Next.js"
     ],
     highlights: [
-      "Secure authentication using Spring Security + JWT",
-      "Normalized relational database design with MySQL",
-      "REST API architecture using Spring Boot",
-      "DTO-based layered architecture (Controller / Service / Repository)",
-      "Unit testing with JUnit and Mockito"
+      "Designed secure REST APIs with Spring Boot",
+      "Implemented authentication and role-based authorization with Spring Security + JWT",
+      "Built relational data model for customers, rewards, and redemption transactions",
+      "Applied layered architecture with Controller, Service, Repository, and DTOs",
+      "Added unit testing with JUnit and Mockito"
     ],
     github: "https://github.com/johnnytelles77/Loyalty-OS.git",
     live: null
@@ -30,7 +30,7 @@ export const projects = [
     title: "SCANEX",
     subtitle: "Blockchain Transaction Analysis Backend",
     description:
-      "Backend service that ingests blockchain transactions, normalizes data, and prepares structured data for transaction analysis.",
+      "Backend service for ingesting blockchain transaction data, normalizing records, and preparing structured data for address analysis.",
     tech: [
       "Java",
       "Spring Boot",
@@ -40,30 +40,31 @@ export const projects = [
       "Docker"
     ],
     highlights: [
-      "Blockchain transaction ingestion from external APIs",
-      "Normalized transaction storage in PostgreSQL",
-      "Layered architecture (Controller / Service / Repository)",
-      "Designed for scalable backend data processing"
+      "Integrated external APIs to retrieve blockchain transaction data",
+      "Normalized and stored transaction records in PostgreSQL",
+      "Built backend services for structured blockchain data processing",
+      "Designed scalable layered architecture for analysis workflows"
     ],
     github: "https://github.com/johnnytelles77/scanex-api.git",
     live: null
   },
   {
     title: "Aegis Tunnel",
-    subtitle: "Secure Tunnel Backend (Zero-Trust Networking)",
+    subtitle: "Secure Tunnel Backend",
     description:
-      "Secure networking backend exploring authenticated tunnel connections between distributed services inspired by zero-trust networking principles.",
+      "Secure networking backend exploring authenticated tunnel communication between distributed services inspired by zero-trust architecture.",
     tech: [
       "Java",
       "Spring Boot",
       "Docker",
-      "Networking Concepts"
+      "WireGuard",
+      "Networking"
     ],
     highlights: [
-      "Backend architecture for secure tunnel management",
-      "Secure service authentication and connection validation",
-      "Spring Boot backend service design",
-      "Containerized deployment using Docker"
+      "Designed backend foundation for secure tunnel management",
+      "Implemented service structure for authenticated communication flows",
+      "Containerized the backend environment with Docker",
+      "Explored zero-trust networking concepts for secure service connectivity"
     ],
     github: "https://github.com/johnnytelles77/aegis-tunnel.git",
     live: null

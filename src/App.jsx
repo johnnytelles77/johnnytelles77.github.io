@@ -6,9 +6,11 @@ export default function App() {
     <div className="page">
       <header className="header">
         <div>
-          <p className="pill">Full Stack Developer</p>
+          <p className="pill">Java Backend Developer</p>
           <h1 className="title">Johnny Telles</h1>
-          <p className="subtitle">Java / Spring Boot • React • SQL • Docker</p>
+          <p className="subtitle">
+            Spring Boot • REST APIs • Spring Security • SQL • Docker
+          </p>
 
           <div className="actions">
             <a className="btn primary" href="/CV.pdf" target="_blank" rel="noreferrer">
@@ -22,73 +24,76 @@ export default function App() {
 
       <main className="main">
         <section className="card" id="about">
-  <h2>About</h2>
-  <p>
-    Full Stack Developer specialized in Java and JavaScript, with hands-on
-    experience building secure backend systems and modern web applications.
-  </p>
-  <p>
-    Strong background in Spring Boot, REST APIs, JWT authentication, database
-    design, and automated testing. Comfortable working with React and Next.js
-    on the frontend.
-  </p>
-  <p>
-    Bilingual (English / Spanish), experienced in remote collaboration and
-    building production-ready applications end to end.
-  </p>
-</section>
+          <h2>About</h2>
+          <p>
+            Java Backend Developer focused on building secure and scalable backend
+            systems using Spring Boot.
+          </p>
+          <p>
+            Experienced designing REST APIs, authentication systems, relational
+            database models, and production-style backend services with clean,
+            maintainable architecture.
+          </p>
+          <p>
+            My work includes customer loyalty platforms, blockchain transaction
+            analysis tools, and secure networking services. Bilingual
+            English/Spanish and comfortable collaborating in remote environments.
+          </p>
+        </section>
 
-<section className="card" id="skills">
-  <h2>Skills</h2>
+        <section className="card" id="skills">
+          <h2>Skills</h2>
 
-  <div className="skills-group">
-    <h3>Backend</h3>
-    <div className="skills">
-      <span className="skill">Java 21</span>
-      <span className="skill">Spring Boot</span>
-      <span className="skill">Spring Security</span>
-      <span className="skill">REST APIs</span>
-      <span className="skill">JWT</span>
-      <span className="skill">Node.js</span>
-      <span className="skill">Express</span>
-    </div>
-  </div>
+          <div className="skills-group">
+            <h3>Backend</h3>
+            <div className="skills">
+              <span className="skill">Java 21</span>
+              <span className="skill">Spring Boot</span>
+              <span className="skill">Spring Security</span>
+              <span className="skill">REST APIs</span>
+              <span className="skill">JWT</span>
+              <span className="skill">JPA / Hibernate</span>
+              <span className="skill">Validation</span>
+            </div>
+          </div>
 
-  <div className="skills-group">
-    <h3>Databases</h3>
-    <div className="skills">
-      <span className="skill">MySQL</span>
-      <span className="skill">MongoDB</span>
-      <span className="skill">Mongoose</span>
-      <span className="skill">Indexing</span>
-      <span className="skill">Schema Design</span>
-    </div>
-  </div>
+          <div className="skills-group">
+            <h3>Databases</h3>
+            <div className="skills">
+              <span className="skill">MySQL</span>
+              <span className="skill">PostgreSQL</span>
+              <span className="skill">MongoDB</span>
+              <span className="skill">Schema Design</span>
+              <span className="skill">Indexing</span>
+              <span className="skill">Query Optimization</span>
+            </div>
+          </div>
 
-  <div className="skills-group">
-    <h3>Frontend</h3>
-    <div className="skills">
-      <span className="skill">React</span>
-      <span className="skill">Next.js</span>
-      <span className="skill">JavaScript</span>
-      <span className="skill">HTML</span>
-      <span className="skill">CSS</span>
-      <span className="skill">Vite</span>
-    </div>
-  </div>
+          <div className="skills-group">
+            <h3>Frontend</h3>
+            <div className="skills">
+              <span className="skill">React</span>
+              <span className="skill">Next.js</span>
+              <span className="skill">JavaScript</span>
+              <span className="skill">HTML</span>
+              <span className="skill">CSS</span>
+              <span className="skill">Tailwind CSS</span>
+            </div>
+          </div>
 
-  <div className="skills-group">
-    <h3>Testing & DevOps</h3>
-    <div className="skills">
-      <span className="skill">JUnit</span>
-      <span className="skill">Mockito</span>
-      <span className="skill">Mocha</span>
-      <span className="skill">Chai</span>
-      <span className="skill">Docker</span>
-      <span className="skill">GitHub Actions</span>
-    </div>
-  </div>
-</section>
+          <div className="skills-group">
+            <h3>Testing & DevOps</h3>
+            <div className="skills">
+              <span className="skill">JUnit</span>
+              <span className="skill">Mockito</span>
+              <span className="skill">Postman</span>
+              <span className="skill">Docker</span>
+              <span className="skill">GitHub Actions</span>
+              <span className="skill">Git</span>
+              <span className="skill">Swagger / OpenAPI</span>
+            </div>
+          </div>
+        </section>
 
         <section className="card" id="projects">
           <h2>Projects</h2>
@@ -136,7 +141,11 @@ export default function App() {
             </li>
             <li>
               <strong>LinkedIn:</strong>{" "}
-              <a href="https://linkedin.com/in/johnny-telles-72024b284" target="_blank" rel="noreferrer">
+              <a
+                href="https://linkedin.com/in/johnny-telles-72024b284"
+                target="_blank"
+                rel="noreferrer"
+              >
                 linkedin.com/in/johnny-telles-72024b284
               </a>
             </li>
