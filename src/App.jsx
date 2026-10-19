@@ -1,127 +1,198 @@
 import "./App.css";
 import { projects } from "./data/projects";
 
+const skillGroups = [
+  {
+    title: "Backend Development",
+    skills: [
+      "Java 21",
+      "Spring Boot",
+      "Spring Security",
+      "Spring Data JPA",
+      "Hibernate",
+      "REST APIs",
+      "Node.js",
+      "Express.js",
+    ],
+  },
+  {
+    title: "Security & Authentication",
+    skills: [
+      "JWT",
+      "Role-Based Access Control",
+      "OAuth 2.0",
+      "Passport.js",
+      "BCrypt",
+    ],
+  },
+  {
+    title: "Databases",
+    skills: [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Mongoose",
+      "Flyway",
+      "Relational Database Design",
+    ],
+  },
+  {
+    title: "Frontend Development",
+    skills: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "Axios",
+    ],
+  },
+  {
+    title: "Testing & DevOps",
+    skills: [
+      "JUnit 5",
+      "Mockito",
+      "MockMvc",
+      "Postman",
+      "Docker",
+      "Docker Compose",
+      "GitHub Actions",
+      "Git",
+      "Maven",
+      "Swagger / OpenAPI",
+    ],
+  },
+];
+
 export default function App() {
   return (
     <div className="page">
       <header className="header">
         <div>
-          <p className="pill">Java Backend Developer</p>
+          <p className="pill">
+            Java Backend Developer | Full-Stack Development
+          </p>
+
           <h1 className="title">Johnny Telles</h1>
+
           <p className="subtitle">
-            Spring Boot • REST APIs • Spring Security • SQL • Docker
+            Java 21 • Spring Boot • REST APIs • Spring Security •
+            PostgreSQL • React • Next.js • Docker
           </p>
 
           <div className="actions">
-            <a className="btn primary" href="/CV.pdf" target="_blank" rel="noreferrer">
+            <a
+              className="btn primary"
+              href="/CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               View CV
             </a>
-            <a className="btn" href="#projects">Projects</a>
-            <a className="btn" href="#contact">Contact</a>
+
+            <a className="btn" href="#projects">
+              View Projects
+            </a>
+
+            <a className="btn" href="#contact">
+              Contact
+            </a>
           </div>
         </div>
       </header>
 
       <main className="main">
         <section className="card" id="about">
-          <h2>About</h2>
+          <h2>About Me</h2>
+
           <p>
-            Java Backend Developer focused on building secure and scalable backend
-            systems using Spring Boot.
+            Java Backend Developer focused on building secure,
+            maintainable REST APIs and backend applications using
+            Java 21, Spring Boot, and Spring Security.
           </p>
+
           <p>
-            Experienced designing REST APIs, authentication systems, relational
-            database models, and production-style backend services with clean,
-            maintainable architecture.
+            Hands-on experience developing banking systems,
+            customer loyalty platforms, and Node.js APIs,
+            including authentication, database persistence,
+            transactional business logic, automated testing,
+            and continuous integration.
           </p>
+
           <p>
-            My work includes customer loyalty platforms, blockchain transaction
-            analysis tools, and secure networking services. Bilingual
-            English/Spanish and comfortable collaborating in remote environments.
+            I also work with React, Next.js, and TypeScript
+            to integrate backend services with modern web
+            interfaces. Bilingual in English and Spanish,
+            with a strong interest in backend engineering,
+            software architecture, and remote collaboration.
           </p>
         </section>
 
         <section className="card" id="skills">
-          <h2>Skills</h2>
+          <h2>Technical Skills</h2>
 
-          <div className="skills-group">
-            <h3>Backend</h3>
-            <div className="skills">
-              <span className="skill">Java 21</span>
-              <span className="skill">Spring Boot</span>
-              <span className="skill">Spring Security</span>
-              <span className="skill">REST APIs</span>
-              <span className="skill">JWT</span>
-              <span className="skill">JPA / Hibernate</span>
-              <span className="skill">Validation</span>
-            </div>
-          </div>
+          {skillGroups.map((group) => (
+            <div className="skills-group" key={group.title}>
+              <h3>{group.title}</h3>
 
-          <div className="skills-group">
-            <h3>Databases</h3>
-            <div className="skills">
-              <span className="skill">MySQL</span>
-              <span className="skill">PostgreSQL</span>
-              <span className="skill">MongoDB</span>
-              <span className="skill">Schema Design</span>
-              <span className="skill">Indexing</span>
-              <span className="skill">Query Optimization</span>
+              <div className="skills">
+                {group.skills.map((skill) => (
+                  <span className="skill" key={skill}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-
-          <div className="skills-group">
-            <h3>Frontend</h3>
-            <div className="skills">
-              <span className="skill">React</span>
-              <span className="skill">Next.js</span>
-              <span className="skill">JavaScript</span>
-              <span className="skill">HTML</span>
-              <span className="skill">CSS</span>
-              <span className="skill">Tailwind CSS</span>
-            </div>
-          </div>
-
-          <div className="skills-group">
-            <h3>Testing & DevOps</h3>
-            <div className="skills">
-              <span className="skill">JUnit</span>
-              <span className="skill">Mockito</span>
-              <span className="skill">Postman</span>
-              <span className="skill">Docker</span>
-              <span className="skill">GitHub Actions</span>
-              <span className="skill">Git</span>
-              <span className="skill">Swagger / OpenAPI</span>
-            </div>
-          </div>
+          ))}
         </section>
 
         <section className="card" id="projects">
-          <h2>Projects</h2>
+          <h2>Featured Projects</h2>
 
           <div className="grid">
             {projects.map((project) => (
               <article key={project.title} className="project">
                 <h3>{project.title}</h3>
+
                 <p className="muted">{project.subtitle}</p>
 
                 <p>{project.description}</p>
 
                 <div className="tech">
-                  {project.tech.map((t) => (
-                    <span key={t} className="badge">{t}</span>
+                  {project.tech.map((technology) => (
+                    <span className="badge" key={technology}>
+                      {technology}
+                    </span>
                   ))}
                 </div>
 
                 <ul className="highlights">
-                  {project.highlights.map((h) => (
-                    <li key={h}>{h}</li>
+                  {project.highlights.map((highlight) => (
+                    <li key={highlight}>
+                      {highlight}
+                    </li>
                   ))}
                 </ul>
 
                 <div className="links">
-                  <a href={project.github} target="_blank" rel="noreferrer">Code</a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Source Code
+                  </a>
+
                   {project.live && (
-                    <a href={project.live} target="_blank" rel="noreferrer">Live</a>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </a>
                   )}
                 </div>
               </article>
@@ -131,29 +202,50 @@ export default function App() {
 
         <section className="card" id="contact">
           <h2>Contact</h2>
+
+          <p>
+            Interested in backend development,
+            full-stack applications, and opportunities
+            to collaborate on software projects.
+          </p>
+
           <ul className="contact">
-            <li><strong>Email:</strong> johnnytelles77@gmail.com</li>
             <li>
-              <strong>GitHub:</strong>{" "}
-              <a href="https://github.com/johnnytelles77" target="_blank" rel="noreferrer">
+              <strong>Email: </strong>
+              <a href="mailto:johnnytelles77@gmail.com">
+                johnnytelles77@gmail.com
+              </a>
+            </li>
+
+            <li>
+              <strong>GitHub: </strong>
+              <a
+                href="https://github.com/johnnytelles77"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 github.com/johnnytelles77
               </a>
             </li>
+
             <li>
-              <strong>LinkedIn:</strong>{" "}
+              <strong>LinkedIn: </strong>
               <a
                 href="https://linkedin.com/in/johnny-telles-72024b284"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
-                linkedin.com/in/johnny-telles-72024b284
+                LinkedIn Profile
               </a>
             </li>
           </ul>
         </section>
 
         <footer className="footer">
-          <p>© {new Date().getFullYear()} Johnny Telles</p>
+          <p>
+            © {new Date().getFullYear()} Johnny Telles.
+            Built with React and Vite.
+          </p>
         </footer>
       </main>
     </div>
