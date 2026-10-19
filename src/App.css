@@ -39,7 +39,7 @@ body{
 .main{
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 20px 60px;
+  padding: 0 20px 0;
   display:flex;
   flex-direction:column;
   gap: 24px;
@@ -138,8 +138,8 @@ body{
   flex-direction: column;
   gap: 10px;
 
-  height: 520px;
-  overflow: hidden;
+  height: auto;
+  min-width: 0;
 }
 
 .project h3{
@@ -179,8 +179,6 @@ body{
 .highlights{
   margin: 0;
   padding-left: 18px;
-  overflow-y: auto;
-  flex: 1;
   padding-right: 8px;
 }
 
@@ -190,19 +188,11 @@ body{
   font-size: 14px;
 }
 
-.highlights::-webkit-scrollbar{
-  width: 6px;
-}
-
-.highlights::-webkit-scrollbar-thumb{
-  background: rgba(255,255,255,0.22);
-  border-radius: 6px;
-}
-
 /* Links */
 .links{
   display:flex;
   gap: 12px;
+  margin-top: auto;
 }
 
 .links a{
